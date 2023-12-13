@@ -53,7 +53,7 @@
 #endif
 
 #if EOOS_GLOBAL_CPU_NUMBER_OF_INTERRUPTS < 2
-    #error "Number of interrupt resources must be more than 2 for EOOS System usage"
+    #error "Number of interrupt resources must not be less than 2 for EOOS System usage"
 #endif
 
 #if EOOS_GLOBAL_CPU_NUMBER_OF_SYSTEM_TIMERS > 1
