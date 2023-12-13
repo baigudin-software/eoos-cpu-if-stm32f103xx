@@ -220,9 +220,9 @@ public:
         uint32_t value;
         struct 
         {
-            uint32_t psc : 1;
-            uint32_t gt  : 1;
-            uint32_t     : 1;
+            uint32_t psc : 8;
+            uint32_t gt  : 8;
+            uint32_t     : 16;
         } bit;
     };
     

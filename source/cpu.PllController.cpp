@@ -172,11 +172,11 @@ bool_t PllController::setSysClkTo72()
         {
             reg::Rcc::Cfgr cfgr(reg_.rcc->cfgr.value);
             cfgr.bit.hpre = 0;      // Set AHB prescaler to SYSCLK not divided
-            cfgr.bit.ppre1 = 1;     // Set APB Low-speed prescaler (APB1) to HCLK divided 2
-            cfgr.bit.ppre2 = 0;     // Reset APB high-speed prescaler (APB2) to HCLK not divided
-            cfgr.bit.pllsrc = 1;    // Reset PLL input clock source to HSE clock as PLL input clock
-            cfgr.bit.pllxtpre = 0;  // Reset HSE divider for PLL input clock
-            cfgr.bit.pllmul = 7;    // Reset PLL multiplication factor to PLL 9x output
+            cfgr.bit.ppre1 = 4;     // Set APB Low-speed prescaler (APB1) to HCLK divided 2
+            cfgr.bit.ppre2 = 0;     // Set APB high-speed prescaler (APB2) to HCLK not divided
+            cfgr.bit.pllsrc = 1;    // Set PLL input clock source to HSE clock as PLL input clock
+            cfgr.bit.pllxtpre = 0;  // Set HSE divider for PLL input clock to HSE clock not divided
+            cfgr.bit.pllmul = 7;    // Set PLL multiplication factor to PLL 9x output
             reg_.rcc->cfgr.value = cfgr.value;
         }
         {
