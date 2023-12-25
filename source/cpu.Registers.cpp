@@ -20,7 +20,10 @@ Registers::Registers()
     usart[INDEX_USART3] = new (reg::Usart::ADDRESS_USART3) reg::Usart;
     usart[INDEX_UART4]  = new (reg::Usart::ADDRESS_UART4)  reg::Usart;
     usart[INDEX_UART5]  = new (reg::Usart::ADDRESS_UART5)  reg::Usart;
-    
+
+    can[INDEX_CAN1] = new (reg::Can::ADDRESS_CAN1) reg::Can;
+    can[INDEX_CAN2] = new (reg::Can::ADDRESS_CAN2) reg::Can;
+
     gpio[INDEX_GPIOA] = new (reg::Gpio::ADDRESS_GPIOA) reg::Gpio;
     gpio[INDEX_GPIOB] = new (reg::Gpio::ADDRESS_GPIOB) reg::Gpio;
     gpio[INDEX_GPIOC] = new (reg::Gpio::ADDRESS_GPIOC) reg::Gpio;

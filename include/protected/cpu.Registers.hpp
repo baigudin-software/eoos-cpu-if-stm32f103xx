@@ -7,6 +7,7 @@
 #define CPU_REGISTERS_HPP_
 
 #include "cpu.reg.Usart.hpp"
+#include "cpu.reg.Can.hpp"
 #include "cpu.reg.Gpio.hpp"
 #include "cpu.reg.Rcc.hpp"
 #include "cpu.reg.Flash.hpp"
@@ -39,7 +40,13 @@ struct Registers
     static const int32_t INDEX_USART3 = 2;
     static const int32_t INDEX_UART4  = 3;
     static const int32_t INDEX_UART5  = 4;
-    
+
+    /**
+     * @brief Index CAN.
+     */    
+    static const int32_t INDEX_CAN1 = 0;
+    static const int32_t INDEX_CAN2 = 1;    
+
     /**
      * @brief Index GPIO.
      */    
@@ -60,6 +67,14 @@ struct Registers
      */
     reg::Usart* usart[5];
     
+    /**
+     * @brief Controller area network (CAN).
+     *
+     * CAN1: 0x40006400 - 0x400067FF;
+     * CAN2: 0x40006800 - 0x40006BFF;
+     */
+    reg::Can* can[2];
+
     /**
      * @brief General-purpose Input Output (GPIO).
      *
