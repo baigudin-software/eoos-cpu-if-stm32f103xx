@@ -243,4 +243,4 @@ public:
 } // namespace reg
 } // namespace cpu
 } // namespace eoos
-#endif // CPU_REG_SYSTICK_HPP_
+#endif // CPU_REG_USART_HPP_
