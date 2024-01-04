@@ -344,8 +344,8 @@ public:
             uint32_t i2c2en   : 1;
             uint32_t usben    : 1;
             uint32_t          : 1;
-            uint32_t canen    : 1;
-            uint32_t          : 1;
+            uint32_t can1en   : 1;
+            uint32_t can2en   : 1;
             uint32_t bkpen    : 1;
             uint32_t pwren    : 1;
             uint32_t dacen    : 1;

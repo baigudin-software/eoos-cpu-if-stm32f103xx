@@ -1,7 +1,7 @@
 /**
  * @file      cpu.reg.Can.hpp
  * @author    Sergey Baigudin, sergey@baigudin.software
- * @copyright 2023, Sergey Baigudin, Baigudin Software
+ * @copyright 2023-2024, Sergey Baigudin, Baigudin Software
  */
 #ifndef CPU_REG_CAN_HPP_
 #define CPU_REG_CAN_HPP_
@@ -87,7 +87,7 @@ public:
             uint32_t       : 7;
             uint32_t reset : 1;
             uint32_t dbf   : 1;
-            uint32_t       : 15;            
+            uint32_t       : 15;
         } bit;
     };
 
