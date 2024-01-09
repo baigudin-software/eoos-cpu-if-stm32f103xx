@@ -126,10 +126,10 @@ bool_t PllController::initialize()
         reg_.rcc->cir.value = cir.value;
     }
     // On the point CLKs are:
-    // SYSCLK    = 8 MHz
-    // HCLK AHB  = 8 MHz
-    // HCLK APB1 = 8 MHz
-    // HCLK APB2 = 8 MHz
+    // SYSCLK     = 8 MHz
+    // HCLK AHB   = 8 MHz
+    // PCLK1 APB1 = 8 MHz
+    // PCLK2 APB2 = 8 MHz
     return setSysClkTo72();
 }
 
@@ -206,10 +206,10 @@ bool_t PllController::setSysClkTo72()
             }        
         }
         // On the point CLKs are:
-        // SYSCLK    = 72 MHz
-        // HCLK AHB  = 72 MHz
-        // HCLK APB1 = 36 MHz
-        // HCLK APB2 = 72 MHz
+        // SYSCLK     = 72 MHz
+        // HCLK AHB   = 72 MHz
+        // PCLK1 APB1 = 36 MHz
+        // PCLK2 APB2 = 72 MHz
         res = true;
     }
     return res;
