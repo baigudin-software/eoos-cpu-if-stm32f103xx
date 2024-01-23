@@ -148,8 +148,12 @@ public:
             uint32_t       : 3;
             uint32_t abrq2 : 1;
             uint32_t code  : 2;
-            uint32_t tme   : 3;
-            uint32_t low   : 3;
+            uint32_t tme0  : 1;
+            uint32_t tme1  : 1;
+            uint32_t tme2  : 1;            
+            uint32_t low0  : 1;
+            uint32_t low1  : 1;
+            uint32_t low2  : 1;
         } bit;
     };
 

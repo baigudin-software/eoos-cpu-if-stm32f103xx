@@ -3,7 +3,7 @@
  * @author    Sergey Baigudin, sergey@baigudin.software
  * @copyright 2023, Sergey Baigudin, Baigudin Software
  *
- * @brief Interrupt low level module.
+ * @brief Interrupt low level module of STM32F103xx like XL-density (Non-connectivity) devices.
  */
                 .arch armv7-m
                 .cpu cortex-m3
@@ -70,10 +70,10 @@ m_vectors:      .word   d_tos_main                /*  00 |   - |   - | Main stac
                 .word   m_handle_dma1_channel6    /*  32 |  16 |  23 | ISR DMA Channel 6                                  */
                 .word   m_handle_dma1_channel7    /*  33 |  17 |  24 | ISR DMA Channel 7                                  */
                 .word   m_handle_adc1_2           /*  34 |  18 |  25 | ISR ADC                                            */
-                .word   m_handle_usb_hp_can_tx    /*  35 |  19 |  26 | ISR USB High Priority or CAN TX                    */
-                .word   m_handle_usb_lp_can_rx0   /*  36 |  20 |  27 | ISR USB Low  Priority or CAN RX0                   */
-                .word   m_handle_can_rx1          /*  37 |  21 |  28 | ISR CAN RX1                                        */
-                .word   m_handle_can_sce          /*  38 |  22 |  29 | ISR CAN SCE                                        */
+                .word   m_handle_usb_hp_can1_tx   /*  35 |  19 |  26 | ISR USB High Priority or CAN1 TX                    */
+                .word   m_handle_usb_lp_can1_rx0  /*  36 |  20 |  27 | ISR USB Low  Priority or CAN1 RX0                   */
+                .word   m_handle_can1_rx1         /*  37 |  21 |  28 | ISR CAN1 RX1                                        */
+                .word   m_handle_can1_sce         /*  38 |  22 |  29 | ISR CAN1 SCE                                        */
                 .word   m_handle_exti9_5          /*  39 |  23 |  30 | ISR EXTI Line 9..5                                 */
                 .word   m_handle_tim1_brk         /*  40 |  24 |  31 | ISR TIM1 Break                                     */
                 .word   m_handle_tim1_up          /*  41 |  25 |  32 | ISR TIM1 Update                                    */
@@ -142,10 +142,10 @@ HANDLE_EXCEPTION m_handle_dma1_channel5    31
 HANDLE_EXCEPTION m_handle_dma1_channel6    32
 HANDLE_EXCEPTION m_handle_dma1_channel7    33
 HANDLE_EXCEPTION m_handle_adc1_2           34
-HANDLE_EXCEPTION m_handle_usb_hp_can_tx    35
-HANDLE_EXCEPTION m_handle_usb_lp_can_rx0   36
-HANDLE_EXCEPTION m_handle_can_rx1          37
-HANDLE_EXCEPTION m_handle_can_sce          38
+HANDLE_EXCEPTION m_handle_usb_hp_can1_tx   35
+HANDLE_EXCEPTION m_handle_usb_lp_can1_rx0  36
+HANDLE_EXCEPTION m_handle_can1_rx1         37
+HANDLE_EXCEPTION m_handle_can1_sce         38
 HANDLE_EXCEPTION m_handle_exti9_5          39
 HANDLE_EXCEPTION m_handle_tim1_brk         40
 HANDLE_EXCEPTION m_handle_tim1_up          41

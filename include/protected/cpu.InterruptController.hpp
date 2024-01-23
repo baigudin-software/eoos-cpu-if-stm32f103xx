@@ -49,7 +49,7 @@ public:
     /**
      * @copydoc eoos::api::CpuInterruptController::createResource()
      */
-    virtual api::CpuInterrupt* createResource(api::Task& handler, int32_t source);
+    virtual api::CpuInterrupt* createResource(api::Runnable& handler, int32_t source);
 
     /**
      * @copydoc eoos::api::CpuInterruptController::getGlobal()

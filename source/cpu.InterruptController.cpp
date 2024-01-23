@@ -65,7 +65,7 @@ bool_t InterruptController::isConstructed() const
     return Parent::isConstructed();
 }
     
-api::CpuInterrupt* InterruptController::createResource(api::Task& handler, int32_t source)
+api::CpuInterrupt* InterruptController::createResource(api::Runnable& handler, int32_t source)
 {
     api::CpuInterrupt* ptr( NULLPTR );
     if( isConstructed() )
