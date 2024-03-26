@@ -48,6 +48,15 @@ public:
         
     /**
      * @copydoc eoos::api::CpuInterruptController::createResource()
+     *
+     * @note For now all the resources are created on default priority level, which is zero. 
+     * This means priorities of interrupts are defined following vector sequence priorities, 
+     * and no preemption applied thus no nesting interrupts.
+     *
+     * @todo Add interrupt resource priorities but control that SysTick and PendSV have 
+     * the same priority level, and the level equal or less than any other interrupt 
+     * priorities as this is very important for FreeRTOS port especially for the 
+     * portYIELD_FROM_ISR() function usage.     
      */
     virtual api::CpuInterrupt* createResource(api::Runnable& handler, int32_t source);
 
@@ -68,8 +77,13 @@ public:
 
     /**
      * @copydoc eoos::api::CpuInterruptController::getNumberSupervisor()
-     */      
+     */
     virtual int32_t getNumberSupervisor() const;
+    
+    /**
+     * @copydoc eoos::api::CpuInterruptController::getNumberPendSupervisor()
+     */
+    virtual int32_t getNumberPendSupervisor() const;    
     
     /**
      * @brief Allocates memory.

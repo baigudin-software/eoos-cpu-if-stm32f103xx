@@ -58,14 +58,15 @@ public:
      */
     union Iser
     {
+        typedef uint32_t Value;
         Iser(){}
-        Iser(uint32_t v){value = v;}
+        Iser(Value v){value = v;}
        ~Iser(){}    
       
-        uint32_t value;
-        struct 
+        Value value;
+        struct Bit 
         {
-            uint32_t setena : 32;
+            Value setena : 32;
         } bit;
     };
 
@@ -74,14 +75,15 @@ public:
      */
     union Icer
     {
+        typedef uint32_t Value;
         Icer(){}
-        Icer(uint32_t v){value = v;}
+        Icer(Value v){value = v;}
        ~Icer(){}    
       
-        uint32_t value;
-        struct 
+        Value value;
+        struct Bit 
         {
-            uint32_t clrena : 32;
+            Value clrena : 32;
         } bit;
     };
 
@@ -90,14 +92,15 @@ public:
      */
     union Ispr
     {
+        typedef uint32_t Value;
         Ispr(){}
-        Ispr(uint32_t v){value = v;}
+        Ispr(Value v){value = v;}
        ~Ispr(){}    
       
-        uint32_t value;
-        struct 
+        Value value;
+        struct Bit 
         {
-            uint32_t setpend : 32;
+            Value setpend : 32;
         } bit;
     };
 
@@ -106,14 +109,15 @@ public:
      */
     union Icpr
     {
+        typedef uint32_t Value;
         Icpr(){}
-        Icpr(uint32_t v){value = v;}
+        Icpr(Value v){value = v;}
        ~Icpr(){}    
       
-        uint32_t value;
-        struct 
+        Value value;
+        struct Bit 
         {
-            uint32_t clrpend : 32;
+            Value clrpend : 32;
         } bit;
     };
 
@@ -122,14 +126,15 @@ public:
      */
     union Iabr
     {
+        typedef uint32_t Value;
         Iabr(){}
-        Iabr(uint32_t v){value = v;}
+        Iabr(Value v){value = v;}
        ~Iabr(){}    
       
-        uint32_t value;
-        struct 
+        Value value;
+        struct Bit 
         {
-            uint32_t active : 32;
+            Value active : 32;
         } bit;
     };
 
@@ -138,17 +143,18 @@ public:
      */
     union Ipr
     {
+        typedef uint32_t Value;
         Ipr(){}
-        Ipr(uint32_t v){value = v;}
+        Ipr(Value v){value = v;}
        ~Ipr(){}    
       
-        uint32_t value;
-        struct 
+        Value value;
+        struct Bit 
         {
-            uint32_t priN0 : 8;
-            uint32_t priN1 : 8;
-            uint32_t priN2 : 8;
-            uint32_t priN3 : 8;
+            Value priN0 : 8;
+            Value priN1 : 8;
+            Value priN2 : 8;
+            Value priN3 : 8;
         } bit;
     };
 

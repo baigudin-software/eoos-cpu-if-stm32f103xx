@@ -69,29 +69,30 @@ public:
      */     
     union Crl
     {
+        typedef uint32_t Value;
         Crl(){}
-        Crl(uint32_t v){value = v;}
+        Crl(Value v){value = v;}
        ~Crl(){}    
       
-        uint32_t value;
-        struct 
+        Value value;
+        struct Bit 
         {
-            uint32_t mode0 : 2;
-            uint32_t cnf0  : 2;
-            uint32_t mode1 : 2;
-            uint32_t cnf1  : 2;
-            uint32_t mode2 : 2;
-            uint32_t cnf2  : 2;
-            uint32_t mode3 : 2;
-            uint32_t cnf3  : 2;
-            uint32_t mode4 : 2;
-            uint32_t cnf4  : 2;
-            uint32_t mode5 : 2;
-            uint32_t cnf5  : 2;
-            uint32_t mode6 : 2;
-            uint32_t cnf6  : 2;
-            uint32_t mode7 : 2;
-            uint32_t cnf7  : 2;
+            Value mode0 : 2;
+            Value cnf0  : 2;
+            Value mode1 : 2;
+            Value cnf1  : 2;
+            Value mode2 : 2;
+            Value cnf2  : 2;
+            Value mode3 : 2;
+            Value cnf3  : 2;
+            Value mode4 : 2;
+            Value cnf4  : 2;
+            Value mode5 : 2;
+            Value cnf5  : 2;
+            Value mode6 : 2;
+            Value cnf6  : 2;
+            Value mode7 : 2;
+            Value cnf7  : 2;
         } bit;
     };
 
@@ -100,29 +101,30 @@ public:
      */     
     union Crh
     {
+        typedef uint32_t Value;
         Crh(){}
-        Crh(uint32_t v){value = v;}
+        Crh(Value v){value = v;}
        ~Crh(){}    
       
-        uint32_t value;
-        struct 
+        Value value;
+        struct Bit 
         {
-            uint32_t mode8  : 2;
-            uint32_t cnf8   : 2;
-            uint32_t mode9  : 2;
-            uint32_t cnf9   : 2;
-            uint32_t mode10 : 2;
-            uint32_t cnf10  : 2;
-            uint32_t mode11 : 2;
-            uint32_t cnf11  : 2;
-            uint32_t mode12 : 2;
-            uint32_t cnf12  : 2;
-            uint32_t mode13 : 2;
-            uint32_t cnf13  : 2;
-            uint32_t mode14 : 2;
-            uint32_t cnf14  : 2;
-            uint32_t mode15 : 2;
-            uint32_t cnf15  : 2;
+            Value mode8  : 2;
+            Value cnf8   : 2;
+            Value mode9  : 2;
+            Value cnf9   : 2;
+            Value mode10 : 2;
+            Value cnf10  : 2;
+            Value mode11 : 2;
+            Value cnf11  : 2;
+            Value mode12 : 2;
+            Value cnf12  : 2;
+            Value mode13 : 2;
+            Value cnf13  : 2;
+            Value mode14 : 2;
+            Value cnf14  : 2;
+            Value mode15 : 2;
+            Value cnf15  : 2;
         } bit;
     };
 
@@ -131,30 +133,31 @@ public:
      */     
     union Idr
     {
+        typedef uint32_t Value;
         Idr(){}
-        Idr(uint32_t v){value = v;}
+        Idr(Value v){value = v;}
        ~Idr(){}    
       
-        uint32_t value;
-        struct 
+        Value value;
+        struct Bit 
         {
-            uint32_t idr0  : 1;
-            uint32_t idr1  : 1;
-            uint32_t idr2  : 1;
-            uint32_t idr3  : 1;
-            uint32_t idr4  : 1;
-            uint32_t idr5  : 1;
-            uint32_t idr6  : 1;
-            uint32_t idr7  : 1;
-            uint32_t idr8  : 1;
-            uint32_t idr9  : 1;
-            uint32_t idr10 : 1;
-            uint32_t idr11 : 1;
-            uint32_t idr12 : 1;
-            uint32_t idr13 : 1;
-            uint32_t idr14 : 1;
-            uint32_t idr15 : 1;
-            uint32_t       : 15;
+            Value idr0  : 1;
+            Value idr1  : 1;
+            Value idr2  : 1;
+            Value idr3  : 1;
+            Value idr4  : 1;
+            Value idr5  : 1;
+            Value idr6  : 1;
+            Value idr7  : 1;
+            Value idr8  : 1;
+            Value idr9  : 1;
+            Value idr10 : 1;
+            Value idr11 : 1;
+            Value idr12 : 1;
+            Value idr13 : 1;
+            Value idr14 : 1;
+            Value idr15 : 1;
+            Value       : 15;
         } bit;
     };
 
@@ -163,30 +166,31 @@ public:
      */     
     union Odr
     {
+        typedef uint32_t Value;
         Odr(){}
-        Odr(uint32_t v){value = v;}
+        Odr(Value v){value = v;}
        ~Odr(){}    
       
-        uint32_t value;
-        struct 
+        Value value;
+        struct Bit 
         {
-            uint32_t odr0  : 1;
-            uint32_t odr1  : 1;
-            uint32_t odr2  : 1;
-            uint32_t odr3  : 1;
-            uint32_t odr4  : 1;
-            uint32_t odr5  : 1;
-            uint32_t odr6  : 1;
-            uint32_t odr7  : 1;
-            uint32_t odr8  : 1;
-            uint32_t odr9  : 1;
-            uint32_t odr10 : 1;
-            uint32_t odr11 : 1;
-            uint32_t odr12 : 1;
-            uint32_t odr13 : 1;
-            uint32_t odr14 : 1;
-            uint32_t odr15 : 1;
-            uint32_t       : 15;
+            Value odr0  : 1;
+            Value odr1  : 1;
+            Value odr2  : 1;
+            Value odr3  : 1;
+            Value odr4  : 1;
+            Value odr5  : 1;
+            Value odr6  : 1;
+            Value odr7  : 1;
+            Value odr8  : 1;
+            Value odr9  : 1;
+            Value odr10 : 1;
+            Value odr11 : 1;
+            Value odr12 : 1;
+            Value odr13 : 1;
+            Value odr14 : 1;
+            Value odr15 : 1;
+            Value       : 15;
         } bit;
     };
 
@@ -195,45 +199,46 @@ public:
      */     
     union Bsrr
     {
+        typedef uint32_t Value;
         Bsrr(){}
-        Bsrr(uint32_t v){value = v;}
+        Bsrr(Value v){value = v;}
        ~Bsrr(){}    
       
-        uint32_t value;
-        struct 
+        Value value;
+        struct Bit 
         {
-            uint32_t bs0  : 1;
-            uint32_t bs1  : 1;
-            uint32_t bs2  : 1;
-            uint32_t bs3  : 1;
-            uint32_t bs4  : 1;
-            uint32_t bs5  : 1;
-            uint32_t bs6  : 1;
-            uint32_t bs7  : 1;
-            uint32_t bs8  : 1;
-            uint32_t bs9  : 1;
-            uint32_t bs10 : 1;
-            uint32_t bs11 : 1;
-            uint32_t bs12 : 1;
-            uint32_t bs13 : 1;
-            uint32_t bs14 : 1;
-            uint32_t bs15 : 1;
-            uint32_t br0  : 1;
-            uint32_t br1  : 1;
-            uint32_t br2  : 1;
-            uint32_t br3  : 1;
-            uint32_t br4  : 1;
-            uint32_t br5  : 1;
-            uint32_t br6  : 1;
-            uint32_t br7  : 1;
-            uint32_t br8  : 1;
-            uint32_t br9  : 1;
-            uint32_t br10 : 1;
-            uint32_t br11 : 1;
-            uint32_t br12 : 1;
-            uint32_t br13 : 1;
-            uint32_t br14 : 1;
-            uint32_t br15 : 1;
+            Value bs0  : 1;
+            Value bs1  : 1;
+            Value bs2  : 1;
+            Value bs3  : 1;
+            Value bs4  : 1;
+            Value bs5  : 1;
+            Value bs6  : 1;
+            Value bs7  : 1;
+            Value bs8  : 1;
+            Value bs9  : 1;
+            Value bs10 : 1;
+            Value bs11 : 1;
+            Value bs12 : 1;
+            Value bs13 : 1;
+            Value bs14 : 1;
+            Value bs15 : 1;
+            Value br0  : 1;
+            Value br1  : 1;
+            Value br2  : 1;
+            Value br3  : 1;
+            Value br4  : 1;
+            Value br5  : 1;
+            Value br6  : 1;
+            Value br7  : 1;
+            Value br8  : 1;
+            Value br9  : 1;
+            Value br10 : 1;
+            Value br11 : 1;
+            Value br12 : 1;
+            Value br13 : 1;
+            Value br14 : 1;
+            Value br15 : 1;
         } bit;
     };
 
@@ -242,30 +247,31 @@ public:
      */     
     union Brr
     {
+        typedef uint32_t Value;
         Brr(){}
-        Brr(uint32_t v){value = v;}
+        Brr(Value v){value = v;}
        ~Brr(){}    
       
-        uint32_t value;
-        struct 
+        Value value;
+        struct Bit 
         {
-            uint32_t br0  : 1;
-            uint32_t br1  : 1;
-            uint32_t br2  : 1;
-            uint32_t br3  : 1;
-            uint32_t br4  : 1;
-            uint32_t br5  : 1;
-            uint32_t br6  : 1;
-            uint32_t br7  : 1;
-            uint32_t br8  : 1;
-            uint32_t br9  : 1;
-            uint32_t br10 : 1;
-            uint32_t br11 : 1;
-            uint32_t br12 : 1;
-            uint32_t br13 : 1;
-            uint32_t br14 : 1;
-            uint32_t br15 : 1;
-            uint32_t      : 15;
+            Value br0  : 1;
+            Value br1  : 1;
+            Value br2  : 1;
+            Value br3  : 1;
+            Value br4  : 1;
+            Value br5  : 1;
+            Value br6  : 1;
+            Value br7  : 1;
+            Value br8  : 1;
+            Value br9  : 1;
+            Value br10 : 1;
+            Value br11 : 1;
+            Value br12 : 1;
+            Value br13 : 1;
+            Value br14 : 1;
+            Value br15 : 1;
+            Value      : 15;
         } bit;
     };
 
@@ -274,31 +280,32 @@ public:
      */     
     union Lckr
     {
+        typedef uint32_t Value;
         Lckr(){}
-        Lckr(uint32_t v){value = v;}
+        Lckr(Value v){value = v;}
        ~Lckr(){}    
       
-        uint32_t value;
-        struct 
+        Value value;
+        struct Bit 
         {
-            uint32_t lck0  : 1;
-            uint32_t lck1  : 1;
-            uint32_t lck2  : 1;
-            uint32_t lck3  : 1;
-            uint32_t lck4  : 1;
-            uint32_t lck5  : 1;
-            uint32_t lck6  : 1;
-            uint32_t lck7  : 1;
-            uint32_t lck8  : 1;
-            uint32_t lck9  : 1;
-            uint32_t lck10 : 1;
-            uint32_t lck11 : 1;
-            uint32_t lck12 : 1;
-            uint32_t lck13 : 1;
-            uint32_t lck14 : 1;
-            uint32_t lck15 : 1;
-            uint32_t lckk  : 1;
-            uint32_t       : 14;
+            Value lck0  : 1;
+            Value lck1  : 1;
+            Value lck2  : 1;
+            Value lck3  : 1;
+            Value lck4  : 1;
+            Value lck5  : 1;
+            Value lck6  : 1;
+            Value lck7  : 1;
+            Value lck8  : 1;
+            Value lck9  : 1;
+            Value lck10 : 1;
+            Value lck11 : 1;
+            Value lck12 : 1;
+            Value lck13 : 1;
+            Value lck14 : 1;
+            Value lck15 : 1;
+            Value lckk  : 1;
+            Value       : 14;
         } bit;
     };
 
@@ -307,30 +314,31 @@ public:
      */     
     union Iosen
     {
+        typedef uint32_t Value;
         Iosen(){}
-        Iosen(uint32_t v){value = v;}
+        Iosen(Value v){value = v;}
        ~Iosen(){}    
       
-        uint32_t value;
-        struct 
+        Value value;
+        struct Bit 
         {
-            uint32_t iosen0  : 1;
-            uint32_t iosen1  : 1;
-            uint32_t iosen2  : 1;
-            uint32_t iosen3  : 1;
-            uint32_t iosen4  : 1;
-            uint32_t iosen5  : 1;
-            uint32_t iosen6  : 1;
-            uint32_t iosen7  : 1;
-            uint32_t iosen8  : 1;
-            uint32_t iosen9  : 1;
-            uint32_t iosen10 : 1;
-            uint32_t iosen11 : 1;
-            uint32_t iosen12 : 1;
-            uint32_t iosen13 : 1;
-            uint32_t iosen14 : 1;
-            uint32_t iosen15 : 1;
-            uint32_t         : 15;
+            Value iosen0  : 1;
+            Value iosen1  : 1;
+            Value iosen2  : 1;
+            Value iosen3  : 1;
+            Value iosen4  : 1;
+            Value iosen5  : 1;
+            Value iosen6  : 1;
+            Value iosen7  : 1;
+            Value iosen8  : 1;
+            Value iosen9  : 1;
+            Value iosen10 : 1;
+            Value iosen11 : 1;
+            Value iosen12 : 1;
+            Value iosen13 : 1;
+            Value iosen14 : 1;
+            Value iosen15 : 1;
+            Value         : 15;
         } bit;
     };
     

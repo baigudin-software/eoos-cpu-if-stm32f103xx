@@ -68,24 +68,25 @@ public:
      */     
     union Sr
     {
+        typedef uint32_t Value;
         Sr(){}
-        Sr(uint32_t v){value = v;}
+        Sr(Value v){value = v;}
        ~Sr(){}    
       
-        uint32_t value;
-        struct 
+        Value value;
+        struct Bit 
         {
-            uint32_t pe   : 1;
-            uint32_t fe   : 1;
-            uint32_t ne   : 1;
-            uint32_t ore  : 1;
-            uint32_t idle : 1;
-            uint32_t rxne : 1;
-            uint32_t tc   : 1;
-            uint32_t txe  : 1;
-            uint32_t lbd  : 1;
-            uint32_t cts  : 1;
-            uint32_t      : 22;
+            Value pe   : 1;
+            Value fe   : 1;
+            Value ne   : 1;
+            Value ore  : 1;
+            Value idle : 1;
+            Value rxne : 1;
+            Value tc   : 1;
+            Value txe  : 1;
+            Value lbd  : 1;
+            Value cts  : 1;
+            Value      : 22;
         } bit;
     };
 
@@ -94,15 +95,16 @@ public:
      */     
     union Dr
     {
+        typedef uint32_t Value;
         Dr(){}
-        Dr(uint32_t v){value = v;}
+        Dr(Value v){value = v;}
        ~Dr(){}    
       
-        uint32_t value;
-        struct 
+        Value value;
+        struct Bit 
         {
-            uint32_t dr : 9;
-            uint32_t    : 23;            
+            Value dr : 9;
+            Value    : 23;            
         } bit;
     };
 
@@ -111,16 +113,17 @@ public:
      */
     union Brr
     {
+        typedef uint32_t Value;
         Brr(){}
-        Brr(uint32_t v){value = v;}
+        Brr(Value v){value = v;}
        ~Brr(){}    
       
-        uint32_t value;
-        struct 
+        Value value;
+        struct Bit 
         {
-            uint32_t divfraction : 4;
-            uint32_t divmantissa : 12;
-            uint32_t             : 16;
+            Value divfraction : 4;
+            Value divmantissa : 12;
+            Value             : 16;
         } bit;
     };
 
@@ -129,28 +132,29 @@ public:
      */
     union Cr1
     {
+        typedef uint32_t Value;
         Cr1(){}
-        Cr1(uint32_t v){value = v;}
+        Cr1(Value v){value = v;}
        ~Cr1(){}    
       
-        uint32_t value;
-        struct 
+        Value value;
+        struct Bit 
         {
-            uint32_t sbk    : 1;
-            uint32_t rwu    : 1;
-            uint32_t re     : 1;
-            uint32_t te     : 1;
-            uint32_t idleie : 1;
-            uint32_t rxneie : 1;
-            uint32_t tcie   : 1;
-            uint32_t txeie  : 1;
-            uint32_t peie   : 1;
-            uint32_t ps     : 1;
-            uint32_t pce    : 1;
-            uint32_t wake   : 1;
-            uint32_t m      : 1;
-            uint32_t ue     : 1;
-            uint32_t        : 18;
+            Value sbk    : 1;
+            Value rwu    : 1;
+            Value re     : 1;
+            Value te     : 1;
+            Value idleie : 1;
+            Value rxneie : 1;
+            Value tcie   : 1;
+            Value txeie  : 1;
+            Value peie   : 1;
+            Value ps     : 1;
+            Value pce    : 1;
+            Value wake   : 1;
+            Value m      : 1;
+            Value ue     : 1;
+            Value        : 18;
         } bit;
     };
 
@@ -159,25 +163,26 @@ public:
      */
     union Cr2
     {
+        typedef uint32_t Value;
         Cr2(){}
-        Cr2(uint32_t v){value = v;}
+        Cr2(Value v){value = v;}
        ~Cr2(){}    
       
-        uint32_t value;
-        struct 
+        Value value;
+        struct Bit 
         {
-            uint32_t add   : 4;
-            uint32_t       : 1;
-            uint32_t lbdl  : 1;
-            uint32_t lbdie : 1;
-            uint32_t       : 1;
-            uint32_t lbcl  : 1;
-            uint32_t cpha  : 1;
-            uint32_t cpol  : 1;
-            uint32_t clken : 1;
-            uint32_t stop  : 2;
-            uint32_t linen : 1;
-            uint32_t       : 17;
+            Value add   : 4;
+            Value       : 1;
+            Value lbdl  : 1;
+            Value lbdie : 1;
+            Value       : 1;
+            Value lbcl  : 1;
+            Value cpha  : 1;
+            Value cpol  : 1;
+            Value clken : 1;
+            Value stop  : 2;
+            Value linen : 1;
+            Value       : 17;
         } bit;
     };
 
@@ -186,25 +191,26 @@ public:
      */
     union Cr3
     {
+        typedef uint32_t Value;
         Cr3(){}
-        Cr3(uint32_t v){value = v;}
+        Cr3(Value v){value = v;}
        ~Cr3(){}    
       
-        uint32_t value;
-        struct 
+        Value value;
+        struct Bit 
         {
-            uint32_t eie   : 1;
-            uint32_t iren  : 1;
-            uint32_t irlp  : 1;
-            uint32_t hdsel : 1;
-            uint32_t nack  : 1;
-            uint32_t scen  : 1;
-            uint32_t dmar  : 1;
-            uint32_t dmat  : 1;
-            uint32_t rtse  : 1;
-            uint32_t ctse  : 1;
-            uint32_t ctsie : 1;
-            uint32_t       : 21;
+            Value eie   : 1;
+            Value iren  : 1;
+            Value irlp  : 1;
+            Value hdsel : 1;
+            Value nack  : 1;
+            Value scen  : 1;
+            Value dmar  : 1;
+            Value dmat  : 1;
+            Value rtse  : 1;
+            Value ctse  : 1;
+            Value ctsie : 1;
+            Value       : 21;
         } bit;
     };
 
@@ -213,16 +219,17 @@ public:
      */
     union Gtpr
     {
+        typedef uint32_t Value;
         Gtpr(){}
-        Gtpr(uint32_t v){value = v;}
+        Gtpr(Value v){value = v;}
        ~Gtpr(){}    
       
-        uint32_t value;
-        struct 
+        Value value;
+        struct Bit 
         {
-            uint32_t psc : 8;
-            uint32_t gt  : 8;
-            uint32_t     : 16;
+            Value psc : 8;
+            Value gt  : 8;
+            Value     : 16;
         } bit;
     };
     

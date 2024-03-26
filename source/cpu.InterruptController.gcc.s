@@ -119,10 +119,9 @@ m_vectors:      .word   d_tos_main                /*  00 |   - |   - | Main stac
 HANDLE_EXCEPTION m_handle_nmi              2
 HANDLE_EXCEPTION m_handle_hardfault        3
 HANDLE_EXCEPTION m_handle_memmanage        4
-HANDLE_EXCEPTION m_handle_busfault         5   
+HANDLE_EXCEPTION m_handle_busfault         5
 HANDLE_EXCEPTION m_handle_usagefault       6
-HANDLE_EXCEPTION m_handle_debugmon         12              
-HANDLE_EXCEPTION m_handle_pendsv           14
+HANDLE_EXCEPTION m_handle_debugmon         12
 HANDLE_EXCEPTION m_handle_wwdg             16
 HANDLE_EXCEPTION m_handle_pvd              17
 HANDLE_EXCEPTION m_handle_tamper           18
@@ -242,6 +241,14 @@ m_handle_svcall_fe:
                 .thumb_func 
 m_handle_svcall_ff:
                 mov     r12, #11
+                b       m_handle_scheduler
+
+/**
+ * @brief System timer routine.
+ */
+                .thumb_func
+m_handle_pendsv:
+                mov     r12, #14
                 b       m_handle_scheduler
 
 /**

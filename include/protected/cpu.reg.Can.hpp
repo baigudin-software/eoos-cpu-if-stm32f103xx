@@ -69,25 +69,26 @@ public:
      */
     union Mcr
     {
+        typedef uint32_t Value;
         Mcr(){}
-        Mcr(uint32_t v){value = v;}
+        Mcr(Value v){value = v;}
        ~Mcr(){}    
       
-        uint32_t value;
-        struct 
+        Value value;
+        struct Bit
         {
-            uint32_t inrq  : 1;
-            uint32_t sleep : 1;
-            uint32_t txfp  : 1;
-            uint32_t rflm  : 1;
-            uint32_t nart  : 1;
-            uint32_t awum  : 1;
-            uint32_t abom  : 1;
-            uint32_t ttcm  : 1;
-            uint32_t       : 7;
-            uint32_t reset : 1;
-            uint32_t dbf   : 1;
-            uint32_t       : 15;
+            Value inrq  : 1;
+            Value sleep : 1;
+            Value txfp  : 1;
+            Value rflm  : 1;
+            Value nart  : 1;
+            Value awum  : 1;
+            Value abom  : 1;
+            Value ttcm  : 1;
+            Value       : 7;
+            Value reset : 1;
+            Value dbf   : 1;
+            Value       : 15;
         } bit;
     };
 
@@ -96,24 +97,25 @@ public:
      */
     union Msr
     {
+        typedef uint32_t Value;
         Msr(){}
-        Msr(uint32_t v){value = v;}
+        Msr(Value v){value = v;}
        ~Msr(){}    
       
-        uint32_t value;
-        struct 
+        Value value;
+        struct Bit 
         {
-            uint32_t inak  : 1;
-            uint32_t slak  : 1;
-            uint32_t erri  : 1;
-            uint32_t wkui  : 1;
-            uint32_t slaki : 1;
-            uint32_t       : 3;
-            uint32_t txm   : 1;
-            uint32_t rxm   : 1;
-            uint32_t samp  : 1;
-            uint32_t rx    : 1;
-            uint32_t       : 20;
+            Value inak  : 1;
+            Value slak  : 1;
+            Value erri  : 1;
+            Value wkui  : 1;
+            Value slaki : 1;
+            Value       : 3;
+            Value txm   : 1;
+            Value rxm   : 1;
+            Value samp  : 1;
+            Value rx    : 1;
+            Value       : 20;
         } bit;
     };
 
@@ -122,38 +124,39 @@ public:
      */
     union Tsr
     {
+        typedef uint32_t Value;
         Tsr(){}
-        Tsr(uint32_t v){value = v;}
+        Tsr(Value v){value = v;}
        ~Tsr(){}    
       
-        uint32_t value;
-        struct 
+        Value value;
+        struct Bit 
         {
-            uint32_t rqcp0 : 1;
-            uint32_t txok0 : 1;
-            uint32_t alst0 : 1;
-            uint32_t terr0 : 1;
-            uint32_t       : 3;
-            uint32_t abrq0 : 1;
-            uint32_t rqcp1 : 1;
-            uint32_t txok1 : 1;
-            uint32_t alst1 : 1;
-            uint32_t terr1 : 1;
-            uint32_t       : 3;
-            uint32_t abrq1 : 1;
-            uint32_t rqcp2 : 1;
-            uint32_t txok2 : 1;
-            uint32_t alst2 : 1;
-            uint32_t terr2 : 1;
-            uint32_t       : 3;
-            uint32_t abrq2 : 1;
-            uint32_t code  : 2;
-            uint32_t tme0  : 1;
-            uint32_t tme1  : 1;
-            uint32_t tme2  : 1;            
-            uint32_t low0  : 1;
-            uint32_t low1  : 1;
-            uint32_t low2  : 1;
+            Value rqcp0 : 1;
+            Value txok0 : 1;
+            Value alst0 : 1;
+            Value terr0 : 1;
+            Value       : 3;
+            Value abrq0 : 1;
+            Value rqcp1 : 1;
+            Value txok1 : 1;
+            Value alst1 : 1;
+            Value terr1 : 1;
+            Value       : 3;
+            Value abrq1 : 1;
+            Value rqcp2 : 1;
+            Value txok2 : 1;
+            Value alst2 : 1;
+            Value terr2 : 1;
+            Value       : 3;
+            Value abrq2 : 1;
+            Value code  : 2;
+            Value tme0  : 1;
+            Value tme1  : 1;
+            Value tme2  : 1;            
+            Value low0  : 1;
+            Value low1  : 1;
+            Value low2  : 1;
         } bit;
     };
 
@@ -162,19 +165,20 @@ public:
      */
     union RfXr
     {
+        typedef uint32_t Value;
         RfXr(){}
-        RfXr(uint32_t v){value = v;}
+        RfXr(Value v){value = v;}
        ~RfXr(){}
       
-        uint32_t value;
-        struct 
+        Value value;
+        struct Bit 
         {
-            uint32_t fmpx  : 2;
-            uint32_t       : 1;
-            uint32_t fullx : 1;
-            uint32_t fovrx : 1;
-            uint32_t rfomx : 1;
-            uint32_t       : 26;
+            Value fmpx  : 2;
+            Value       : 1;
+            Value fullx : 1;
+            Value fovrx : 1;
+            Value rfomx : 1;
+            Value       : 26;
         } bit;
     };
 
@@ -183,30 +187,31 @@ public:
      */
     union Ier
     {
+        typedef uint32_t Value;
         Ier(){}
-        Ier(uint32_t v){value = v;}
+        Ier(Value v){value = v;}
        ~Ier(){}    
       
-        uint32_t value;
-        struct 
+        Value value;
+        struct Bit 
         {
-            uint32_t tmeie  : 1;
-            uint32_t fmpie0 : 1;
-            uint32_t ffie0  : 1;
-            uint32_t fovie0 : 1;
-            uint32_t fmpie1 : 1;
-            uint32_t ffie1  : 1;
-            uint32_t fovie1 : 1;
-            uint32_t        : 1;
-            uint32_t ewgie  : 1;
-            uint32_t epvie  : 1;
-            uint32_t bofie  : 1;
-            uint32_t lecie  : 1;
-            uint32_t        : 3;
-            uint32_t errie  : 1;
-            uint32_t wkuie  : 1;
-            uint32_t slkie  : 1;
-            uint32_t        : 14;
+            Value tmeie  : 1;
+            Value fmpie0 : 1;
+            Value ffie0  : 1;
+            Value fovie0 : 1;
+            Value fmpie1 : 1;
+            Value ffie1  : 1;
+            Value fovie1 : 1;
+            Value        : 1;
+            Value ewgie  : 1;
+            Value epvie  : 1;
+            Value bofie  : 1;
+            Value lecie  : 1;
+            Value        : 3;
+            Value errie  : 1;
+            Value wkuie  : 1;
+            Value slkie  : 1;
+            Value        : 14;
         } bit;
     };
 
@@ -215,21 +220,22 @@ public:
      */
     union Esr
     {
+        typedef uint32_t Value;
         Esr(){}
         Esr(uint32_t v){value = v;}
        ~Esr(){}    
       
-        uint32_t value;
-        struct 
+        Value value;
+        struct Bit 
         {
-            uint32_t ewgf : 1;
-            uint32_t epvf : 1;
-            uint32_t boff : 1;
-            uint32_t      : 1;
-            uint32_t lec  : 3;
-            uint32_t      : 9;
-            uint32_t tec  : 8;
-            uint32_t rec  : 8;
+            Value ewgf : 1;
+            Value epvf : 1;
+            Value boff : 1;
+            Value      : 1;
+            Value lec  : 3;
+            Value      : 9;
+            Value tec  : 8;
+            Value rec  : 8;
         } bit;
     };
 
@@ -238,22 +244,23 @@ public:
      */
     union Btr
     {
+        typedef uint32_t Value;
         Btr(){}
-        Btr(uint32_t v){value = v;}
+        Btr(Value v){value = v;}
        ~Btr(){}    
       
-        uint32_t value;
-        struct 
+        Value value;
+        struct Bit 
         {
-            uint32_t brp  : 10;
-            uint32_t      : 6;
-            uint32_t ts1  : 4;
-            uint32_t ts2  : 3;
-            uint32_t      : 1;
-            uint32_t sjw  : 2;
-            uint32_t      : 4;
-            uint32_t lbkm : 1;
-            uint32_t silm : 1;
+            Value brp  : 10;
+            Value      : 6;
+            Value ts1  : 4;
+            Value ts2  : 3;
+            Value      : 1;
+            Value sjw  : 2;
+            Value      : 4;
+            Value lbkm : 1;
+            Value silm : 1;
         } bit;
     };
     
@@ -283,18 +290,19 @@ public:
          */
         union TiXr
         {
+            typedef uint32_t Value;
             TiXr(){}
-            TiXr(uint32_t v){value = v;}
+            TiXr(Value v){value = v;}
            ~TiXr(){}    
           
-            uint32_t value;
-            struct 
+            Value value;
+            struct Bit 
             {
-                uint32_t txrq : 1;
-                uint32_t rtr  : 1;
-                uint32_t ide  : 1;
-                uint32_t exid : 18;
-                uint32_t stid : 11;
+                Value txrq : 1;
+                Value rtr  : 1;
+                Value ide  : 1;
+                Value exid : 18;
+                Value stid : 11;
             } bit;
         };
         
@@ -303,18 +311,19 @@ public:
          */
         union TdtXr
         {
+            typedef uint32_t Value;
             TdtXr(){}
-            TdtXr(uint32_t v){value = v;}
+            TdtXr(Value v){value = v;}
            ~TdtXr(){}    
           
-            uint32_t value;
-            struct 
+            Value value;
+            struct Bit 
             {
-                uint32_t dlc  : 4;
-                uint32_t      : 4;
-                uint32_t tgt  : 1;
-                uint32_t      : 7;
-                uint32_t time : 16;
+                Value dlc  : 4;
+                Value      : 4;
+                Value tgt  : 1;
+                Value      : 7;
+                Value time : 16;
             } bit;
         };
         
@@ -323,17 +332,18 @@ public:
          */
         union TdlXr
         {
+            typedef uint32_t Value;
             TdlXr(){}
-            TdlXr(uint32_t v){value = v;}
+            TdlXr(Value v){value = v;}
            ~TdlXr(){}    
           
-            uint32_t value;
-            struct 
+            Value value;
+            struct Bit 
             {
-                uint32_t data0 : 8;
-                uint32_t data1 : 8;
-                uint32_t data2 : 8;
-                uint32_t data3 : 8;
+                Value data0 : 8;
+                Value data1 : 8;
+                Value data2 : 8;
+                Value data3 : 8;
             } bit;
         };
         
@@ -342,17 +352,18 @@ public:
          */
         union TdhXr
         {
+            typedef uint32_t Value;
             TdhXr(){}
-            TdhXr(uint32_t v){value = v;}
+            TdhXr(Value v){value = v;}
            ~TdhXr(){}    
           
-            uint32_t value;
-            struct 
+            Value value;
+            struct Bit 
             {
-                uint32_t data4 : 8;
-                uint32_t data5 : 8;
-                uint32_t data6 : 8;
-                uint32_t data7 : 8;
+                Value data4 : 8;
+                Value data5 : 8;
+                Value data6 : 8;
+                Value data7 : 8;
             } bit;
         };
         
@@ -388,18 +399,19 @@ public:
          */
         union RiXr
         {
+            typedef uint32_t Value;
             RiXr(){}
-            RiXr(uint32_t v){value = v;}
+            RiXr(Value v){value = v;}
            ~RiXr(){}    
           
-            uint32_t value;
-            struct 
+            Value value;
+            struct Bit 
             {
-                uint32_t      : 1;
-                uint32_t rtr  : 1;
-                uint32_t ide  : 1;
-                uint32_t exid : 18;
-                uint32_t stid : 11;
+                Value      : 1;
+                Value rtr  : 1;
+                Value ide  : 1;
+                Value exid : 18;
+                Value stid : 11;
             } bit;
         };
         
@@ -408,17 +420,18 @@ public:
          */
         union RdtXr
         {
+            typedef uint32_t Value;
             RdtXr(){}
-            RdtXr(uint32_t v){value = v;}
+            RdtXr(Value v){value = v;}
            ~RdtXr(){}    
           
-            uint32_t value;
-            struct 
+            Value value;
+            struct Bit 
             {
-                uint32_t dlc  : 4;
-                uint32_t      : 4;
-                uint32_t fmi  : 8;
-                uint32_t time : 16;
+                Value dlc  : 4;
+                Value      : 4;
+                Value fmi  : 8;
+                Value time : 16;
             } bit;
         };
         
@@ -427,17 +440,18 @@ public:
          */
         union RdlXr
         {
+            typedef uint32_t Value;
             RdlXr(){}
-            RdlXr(uint32_t v){value = v;}
+            RdlXr(Value v){value = v;}
            ~RdlXr(){}    
           
-            uint32_t value;
-            struct 
+            Value value;
+            struct Bit 
             {
-                uint32_t data0 : 8;
-                uint32_t data1 : 8;
-                uint32_t data2 : 8;
-                uint32_t data3 : 8;
+                Value data0 : 8;
+                Value data1 : 8;
+                Value data2 : 8;
+                Value data3 : 8;
             } bit;
         };
         
@@ -446,17 +460,18 @@ public:
          */
         union RdhXr
         {
+            typedef uint32_t Value;
             RdhXr(){}
-            RdhXr(uint32_t v){value = v;}
+            RdhXr(Value v){value = v;}
            ~RdhXr(){}    
           
-            uint32_t value;
-            struct 
+            Value value;
+            struct Bit 
             {
-                uint32_t data4 : 8;
-                uint32_t data5 : 8;
-                uint32_t data6 : 8;
-                uint32_t data7 : 8;
+                Value data4 : 8;
+                Value data5 : 8;
+                Value data6 : 8;
+                Value data7 : 8;
             } bit;
         };
         
@@ -471,17 +486,18 @@ public:
      */
     union Fmr
     {
+        typedef uint32_t Value;
         Fmr(){}
-        Fmr(uint32_t v){value = v;}
+        Fmr(Value v){value = v;}
        ~Fmr(){}    
       
-        uint32_t value;
-        struct 
+        Value value;
+        struct Bit 
         {
-            uint32_t finit  : 1;
-            uint32_t        : 7;
-            uint32_t can2sb : 6;
-            uint32_t        : 18;
+            Value finit  : 1;
+            Value        : 7;
+            Value can2sb : 6;
+            Value        : 18;
         } bit;
     };
 
@@ -490,15 +506,16 @@ public:
      */
     union Fm1r
     {
+        typedef uint32_t Value;
         Fm1r(){}
-        Fm1r(uint32_t v){value = v;}
+        Fm1r(Value v){value = v;}
        ~Fm1r(){}    
       
-        uint32_t value;
-        struct 
+        Value value;
+        struct Bit 
         {
-            uint32_t fbm : 28;
-            uint32_t     : 4;
+            Value fbm : 28;
+            Value     : 4;
         } bit;
     };
 
@@ -507,15 +524,16 @@ public:
      */
     union Fs1r
     {
+        typedef uint32_t Value;
         Fs1r(){}
-        Fs1r(uint32_t v){value = v;}
+        Fs1r(Value v){value = v;}
        ~Fs1r(){}    
       
-        uint32_t value;
-        struct 
+        Value value;
+        struct Bit 
         {
-            uint32_t fsc : 28;
-            uint32_t     : 4;
+            Value fsc : 28;
+            Value     : 4;
         } bit;
     };
 
@@ -524,15 +542,16 @@ public:
      */
     union Ffa1r
     {
+        typedef uint32_t Value;
         Ffa1r(){}
-        Ffa1r(uint32_t v){value = v;}
+        Ffa1r(Value v){value = v;}
        ~Ffa1r(){}    
       
-        uint32_t value;
-        struct 
+        Value value;
+        struct Bit 
         {
-            uint32_t ffa : 28;
-            uint32_t     : 4;
+            Value ffa : 28;
+            Value     : 4;
         } bit;
     };
 
@@ -541,15 +560,16 @@ public:
      */
     union Fa1r
     {
+        typedef uint32_t Value;
         Fa1r(){}
-        Fa1r(uint32_t v){value = v;}
+        Fa1r(Value v){value = v;}
        ~Fa1r(){}    
       
-        uint32_t value;
-        struct 
+        Value value;
+        struct Bit 
         {
-            uint32_t fact : 28;
-            uint32_t      : 4;
+            Value fact : 28;
+            Value      : 4;
         } bit;
     };
     
@@ -558,14 +578,15 @@ public:
      */
     union FiRx
     {
+        typedef uint32_t Value;
         FiRx(){}
-        FiRx(uint32_t v){value = v;}
+        FiRx(Value v){value = v;}
        ~FiRx(){}    
       
-        uint32_t value;
-        struct 
+        Value value;
+        struct Bit 
         {
-            uint32_t fb : 32;
+            Value fb : 32;
         } bit;
     };
 

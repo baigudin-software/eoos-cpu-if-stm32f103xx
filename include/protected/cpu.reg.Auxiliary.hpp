@@ -58,17 +58,18 @@ public:
      */
     union Actlr
     {
+        typedef uint32_t Value;
         Actlr(){}
-        Actlr(uint32_t v){value = v;}
+        Actlr(Value v){value = v;}
        ~Actlr(){}    
       
-        uint32_t value;
-        struct 
+        Value value;
+        struct Bit
         {
-            uint32_t dismcycint : 1;
-            uint32_t disdefwbuf : 1;
-            uint32_t disfold    : 1;
-            uint32_t            : 29;
+            Value dismcycint : 1;
+            Value disdefwbuf : 1;
+            Value disfold    : 1;
+            Value            : 29;
         } bit;
     };
     

@@ -15,6 +15,7 @@
 #include "cpu.reg.SysTick.hpp"
 #include "cpu.reg.Nvic.hpp"
 #include "cpu.reg.Scb.hpp"
+#include "cpu.reg.Dbg.hpp"
 
 namespace eoos
 {
@@ -97,6 +98,12 @@ struct Registers
      * 0x40022000 - 0x400223FF
      */
     reg::Flash* flash;
+    
+    /**
+     * @brief Debug MCU.
+     * 0xE0042000 - 0xE0042004
+     */
+    reg::Dbg* dbg;    
 
     /**
      * @brief System Control Space.

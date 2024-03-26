@@ -12,7 +12,8 @@ namespace cpu
     
 Registers::Registers()
     : rcc   ( new (reg::Rcc::ADDRESS)   reg::Rcc   )
-    , flash ( new (reg::Flash::ADDRESS) reg::Flash ) 
+    , flash ( new (reg::Flash::ADDRESS) reg::Flash )
+    , dbg   ( new (reg::Dbg::ADDRESS)   reg::Dbg   )
     , scs() {
 
     usart[INDEX_USART1] = new (reg::Usart::ADDRESS_USART1) reg::Usart;

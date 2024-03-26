@@ -38,7 +38,6 @@ extern "C" void CpuInterruptController_handleException(int32_t exception)
 {
     InterruptController::handleException(exception);
 }
-
     
 api::Heap* InterruptController::resource_( NULLPTR );
 
@@ -98,6 +97,14 @@ void InterruptController::jump(int32_t exception)
     {
         CpuInterruptController_jumpSvcLow(exception);
     }
+    else if( exception == getNumberPendSupervisor() )
+    {
+        // Make PendSV exception pending
+        // @todo consider to move this functionality to a set() function, 
+        // as actually here we set a pending flag and after that HW routers 
+        // a program to an appropriate ISR. 
+        data_.reg.scs.scb->icsr.bit.pendsvset = 1;
+    }
     else
     {
         CpuInterruptController_jumpUsrLow(exception);
@@ -112,6 +119,11 @@ int32_t InterruptController::getNumberSystick() const
 int32_t InterruptController::getNumberSupervisor() const
 {
     return Resource::EXCEPTION_SVCALL;
+}
+
+int32_t InterruptController::getNumberPendSupervisor() const
+{
+    return Resource::EXCEPTION_PENDSV;
 }
 
 bool_t InterruptController::construct()

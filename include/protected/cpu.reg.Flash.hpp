@@ -75,18 +75,19 @@ public:
      */
     union Acr
     {
+        typedef uint32_t Value;        
         Acr(){}
-        Acr(uint32_t v){value = v;}
+        Acr(Value v){value = v;}
        ~Acr(){}    
       
-        uint32_t value;
-        struct 
+        Value value;
+        struct Bit 
         {
-            uint32_t latency : 3;
-            uint32_t hlfcya  : 1;
-            uint32_t prftbe  : 1;
-            uint32_t prftbs  : 1;
-            uint32_t         : 26;
+            Value latency : 3;
+            Value hlfcya  : 1;
+            Value prftbe  : 1;
+            Value prftbs  : 1;
+            Value         : 26;
         } bit;
     };
   
@@ -95,14 +96,15 @@ public:
      */
     union Keyr
     {
+        typedef uint32_t Value;
         Keyr(){}
-        Keyr(uint32_t v){value = v;}
+        Keyr(Value v){value = v;}
        ~Keyr(){}    
       
-        uint32_t value;
-        struct 
+        Value value;
+        struct Bit 
         {
-            uint32_t fkeyr : 32;   
+            Value fkeyr : 32;   
         } bit;
     };
     
@@ -111,14 +113,15 @@ public:
      */
     union Optkeyr
     {
+        typedef uint32_t Value;
         Optkeyr(){}
-        Optkeyr(uint32_t v){value = v;}
+        Optkeyr(Value v){value = v;}
        ~Optkeyr(){}    
       
-        uint32_t value;
-        struct 
+        Value value;
+        struct Bit 
         {
-            uint32_t optkey : 32;
+            Value optkey : 32;
         } bit;
     };
              
@@ -127,20 +130,21 @@ public:
      */
     union Sr
     {
+        typedef uint32_t Value;
         Sr(){}
-        Sr(uint32_t v){value = v;}
+        Sr(Value v){value = v;}
        ~Sr(){}    
       
-        uint32_t value;
-        struct 
+        Value value;
+        struct Bit 
         {
-            uint32_t bsy      : 1;
-            uint32_t          : 1;
-            uint32_t pgerr    : 1;
-            uint32_t          : 1;
-            uint32_t wrprterr : 1;
-            uint32_t eop      : 1;
-            uint32_t          : 26;
+            Value bsy      : 1;
+            Value          : 1;
+            Value pgerr    : 1;
+            Value          : 1;
+            Value wrprterr : 1;
+            Value eop      : 1;
+            Value          : 26;
         } bit;
     };
 
@@ -149,27 +153,28 @@ public:
      */
     union Cr
     {
+        typedef uint32_t Value;
         Cr(){}
-        Cr(uint32_t v){value = v;}
+        Cr(Value v){value = v;}
        ~Cr(){}    
       
-        uint32_t value;
-        struct 
+        Value value;
+        struct Bit 
         {
-            uint32_t pg     : 1;
-            uint32_t per    : 1;
-            uint32_t mer    : 1;
-            uint32_t        : 1;
-            uint32_t optpg  : 1;
-            uint32_t opter  : 1;
-            uint32_t strt   : 1;
-            uint32_t lock   : 1;
-            uint32_t        : 1;
-            uint32_t optwre : 1;
-            uint32_t errie  : 1;
-            uint32_t        : 1;
-            uint32_t eopie  : 1;
-            uint32_t        : 19;
+            Value pg     : 1;
+            Value per    : 1;
+            Value mer    : 1;
+            Value        : 1;
+            Value optpg  : 1;
+            Value opter  : 1;
+            Value strt   : 1;
+            Value lock   : 1;
+            Value        : 1;
+            Value optwre : 1;
+            Value errie  : 1;
+            Value        : 1;
+            Value eopie  : 1;
+            Value        : 19;
         } bit;
     };
 
@@ -178,14 +183,15 @@ public:
      */
     union Ar
     {
+        typedef uint32_t Value;
         Ar(){}
-        Ar(uint32_t v){value = v;}
+        Ar(Value v){value = v;}
        ~Ar(){}    
       
-        uint32_t value;
-        struct 
+        Value value;
+        struct Bit 
         {
-            uint32_t far : 32;
+            Value far : 32;
         } bit;
     };
 
@@ -194,22 +200,23 @@ public:
      */
     union Obr
     {
+        typedef uint32_t Value;
         Obr(){}
-        Obr(uint32_t v){value = v;}
+        Obr(Value v){value = v;}
        ~Obr(){}    
       
-        uint32_t value;
-        struct 
+        Value value;
+        struct Bit 
         {
-            uint32_t opterr    : 1;
-            uint32_t rdprt     : 1;
-            uint32_t wdgsw     : 1;
-            uint32_t nrststop  : 1;
-            uint32_t nrststdby : 1;
-            uint32_t           : 5;
-            uint32_t data0     : 8;
-            uint32_t data1     : 8;
-            uint32_t           : 6;
+            Value opterr    : 1;
+            Value rdprt     : 1;
+            Value wdgsw     : 1;
+            Value nrststop  : 1;
+            Value nrststdby : 1;
+            Value           : 5;
+            Value data0     : 8;
+            Value data1     : 8;
+            Value           : 6;
         } bit;
     };
 
@@ -218,14 +225,15 @@ public:
      */
     union Wrpr
     {
+        typedef uint32_t Value;
         Wrpr(){}
-        Wrpr(uint32_t v){value = v;}
+        Wrpr(Value v){value = v;}
        ~Wrpr(){}    
       
-        uint32_t value;
-        struct 
+        Value value;
+        struct Bit 
         {
-            uint32_t wrp : 32;
+            Value wrp : 32;
         } bit;
     };
   
@@ -234,15 +242,16 @@ public:
      */
     union Latencyex
     {
+        typedef uint32_t Value;
         Latencyex(){}
-        Latencyex(uint32_t v){value = v;}
+        Latencyex(Value v){value = v;}
        ~Latencyex(){}    
       
-        uint32_t value;
-        struct 
+        Value value;
+        struct Bit 
         {
-            uint32_t latency43 : 2;
-            uint32_t           : 30;
+            Value latency43 : 2;
+            Value           : 30;
         } bit;
     };
   
@@ -251,23 +260,24 @@ public:
      */
     union Ecr
     {
+        typedef uint32_t Value;
         Ecr(){}
-        Ecr(uint32_t v){value = v;}
+        Ecr(Value v){value = v;}
        ~Ecr(){}    
       
-        uint32_t value;
-        struct 
+        Value value;
+        struct Bit 
         {
-            uint32_t sethper : 1;
-            uint32_t setwpg  : 1;
-            uint32_t set2wpg : 1;
-            uint32_t set4wpg : 1;
-            uint32_t infhper : 1;
-            uint32_t infhwpg : 1;
-            uint32_t infwpg  : 1;
-            uint32_t inf2wpg : 1;
-            uint32_t inf4wpg : 1;
-            uint32_t         : 23;    
+            Value sethper : 1;
+            Value setwpg  : 1;
+            Value set2wpg : 1;
+            Value set4wpg : 1;
+            Value infhper : 1;
+            Value infhwpg : 1;
+            Value infwpg  : 1;
+            Value inf2wpg : 1;
+            Value inf4wpg : 1;
+            Value         : 23;    
         } bit;
     };
     
@@ -276,15 +286,16 @@ public:
      */
     union Encryctl
     {
+        typedef uint32_t Value;
         Encryctl(){}
-        Encryctl(uint32_t v){value = v;}
+        Encryctl(Value v){value = v;}
        ~Encryctl(){}    
       
-        uint32_t value;
-        struct 
+        Value value;
+        struct Bit 
         {
-            uint32_t encryen : 1;
-            uint32_t         : 31;   
+            Value encryen : 1;
+            Value         : 31;   
         } bit;
     };
 
@@ -293,15 +304,16 @@ public:
      */
     union Decryctl
     {
+        typedef uint32_t Value;
         Decryctl(){}
-        Decryctl(uint32_t v){value = v;}
+        Decryctl(Value v){value = v;}
        ~Decryctl(){}    
       
-        uint32_t value;
-        struct 
+        Value value;
+        struct Bit 
         {
-            uint32_t decryen : 1;
-            uint32_t         : 31;
+            Value decryen : 1;
+            Value         : 31;
         } bit;
     };
       
@@ -310,14 +322,15 @@ public:
      */
     union Ukeyl
     {
+        typedef uint32_t Value;
         Ukeyl(){}
-        Ukeyl(uint32_t v){value = v;}
+        Ukeyl(Value v){value = v;}
        ~Ukeyl(){}    
       
-        uint32_t value;
-        struct 
+        Value value;
+        struct Bit 
         {
-            uint32_t ukey : 32;
+            Value ukey : 32;
         } bit;
     };
       
@@ -326,14 +339,15 @@ public:
      */
     union Ukeyh
     {
+        typedef uint32_t Value;
         Ukeyh(){}
-        Ukeyh(uint32_t v){value = v;}
+        Ukeyh(Value v){value = v;}
        ~Ukeyh(){}    
       
-        uint32_t value;
-        struct 
+        Value value;
+        struct Bit 
         {
-            uint32_t ukey : 32;
+            Value ukey : 32;
         } bit;
     };
         
@@ -342,14 +356,15 @@ public:
      */
     union Pw0
     {
+        typedef uint32_t Value;
         Pw0(){}
-        Pw0(uint32_t v){value = v;}
+        Pw0(Value v){value = v;}
        ~Pw0(){}    
       
-        uint32_t value;
-        struct 
+        Value value;
+        struct Bit 
         {
-            uint32_t pw0 : 32;
+            Value pw0 : 32;
         } bit;
     };
       
@@ -358,14 +373,15 @@ public:
      */
     union Pw1
     {
+        typedef uint32_t Value;
         Pw1(){}
-        Pw1(uint32_t v){value = v;}
+        Pw1(Value v){value = v;}
        ~Pw1(){}    
       
-        uint32_t value;
-        struct 
+        Value value;
+        struct Bit 
         {
-            uint32_t pw1 : 32;
+            Value pw1 : 32;
         } bit;
     };
     
@@ -374,14 +390,15 @@ public:
      */
     union Pw2
     {
+        typedef uint32_t Value;
         Pw2(){}
-        Pw2(uint32_t v){value = v;}
+        Pw2(Value v){value = v;}
        ~Pw2(){}    
       
-        uint32_t value;
-        struct 
+        Value value;
+        struct Bit 
         {
-            uint32_t pw0 : 32;
+            Value pw0 : 32;
         } bit;
     };
 
@@ -390,14 +407,15 @@ public:
      */
     union Pw3
     {
+        typedef uint32_t Value;
         Pw3(){}
-        Pw3(uint32_t v){value = v;}
+        Pw3(Value v){value = v;}
        ~Pw3(){}    
       
-        uint32_t value;
-        struct 
+        Value value;
+        struct Bit 
         {
-            uint32_t pw0 : 32;
+            Value pw0 : 32;
         } bit;
     };
     

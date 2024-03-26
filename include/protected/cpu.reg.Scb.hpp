@@ -84,18 +84,19 @@ public:
      */
     union Cpuid
     {
+        typedef uint32_t Value;
         Cpuid(){}
-        Cpuid(uint32_t v){value = v;}
+        Cpuid(Value v){value = v;}
        ~Cpuid(){}    
       
-        uint32_t value;
-        struct 
+        Value value;
+        struct Bit 
         {
-            uint32_t revision    : 4;
-            uint32_t partno      : 12;
-            uint32_t             : 4;
-            uint32_t variant     : 4;
-            uint32_t implementer : 8;
+            Value revision    : 4;
+            Value partno      : 12;
+            Value             : 4;
+            Value variant     : 4;
+            Value implementer : 8;
         } bit;
     };
 
@@ -104,27 +105,28 @@ public:
      */
     union Icsr
     {
+        typedef uint32_t Value;
         Icsr(){}
-        Icsr(uint32_t v){value = v;}
+        Icsr(Value v){value = v;}
        ~Icsr(){}    
       
-        uint32_t value;
-        struct 
+        Value value;
+        struct Bit 
         {
-            uint32_t vectactive  : 9;
-            uint32_t             : 2;
-            uint32_t rettobase   : 1;
-            uint32_t vectpending : 9;
-            uint32_t             : 1;
-            uint32_t isrpending  : 1;
-            uint32_t isrpreempt  : 1;
-            uint32_t             : 1;
-            uint32_t pendstclr   : 1;
-            uint32_t pendstset   : 1;
-            uint32_t pendsvclr   : 1;
-            uint32_t pendsvset   : 1;
-            uint32_t             : 2;
-            uint32_t nmipendset  : 1;
+            Value vectactive  : 9;
+            Value             : 2;
+            Value rettobase   : 1;
+            Value vectpending : 9;
+            Value             : 1;
+            Value isrpending  : 1;
+            Value isrpreempt  : 1;
+            Value             : 1;
+            Value pendstclr   : 1;
+            Value pendstset   : 1;
+            Value pendsvclr   : 1;
+            Value pendsvset   : 1;
+            Value             : 2;
+            Value nmipendset  : 1;
         } bit;
     };
 
@@ -133,15 +135,16 @@ public:
      */
     union Vtor
     {
+        typedef uint32_t Value;
         Vtor(){}
-        Vtor(uint32_t v){value = v;}
+        Vtor(Value v){value = v;}
        ~Vtor(){}    
       
-        uint32_t value;
-        struct 
+        Value value;
+        struct Bit 
         {
-            uint32_t        : 7;
-            uint32_t tbloff : 25;
+            Value        : 7;
+            Value tbloff : 25;
         } bit;
     };
 
@@ -150,21 +153,22 @@ public:
      */
     union Aircr
     {
+        typedef uint32_t Value;
         Aircr(){}
-        Aircr(uint32_t v){value = v;}
+        Aircr(Value v){value = v;}
        ~Aircr(){}    
       
-        uint32_t value;
-        struct 
+        Value value;
+        struct Bit 
         {
-            uint32_t vectreset     : 1; 
-            uint32_t vectclractive : 1; 
-            uint32_t sysresetreq   : 1; 
-            uint32_t               : 5;
-            uint32_t prigroup      : 3; 
-            uint32_t               : 4;
-            uint32_t endianess     : 1; 
-            uint32_t vectkey       : 16;
+            Value vectreset     : 1; 
+            Value vectclractive : 1; 
+            Value sysresetreq   : 1; 
+            Value               : 5;
+            Value prigroup      : 3; 
+            Value               : 4;
+            Value endianess     : 1; 
+            Value vectkey       : 16;
         } bit;
     };
 
@@ -173,19 +177,20 @@ public:
      */
     union Scr
     {
+        typedef uint32_t Value;
         Scr(){}
-        Scr(uint32_t v){value = v;}
+        Scr(Value v){value = v;}
        ~Scr(){}    
       
-        uint32_t value;
-        struct 
+        Value value;
+        struct Bit 
         {
-            uint32_t             : 1;
-            uint32_t sleeponexit : 1;
-            uint32_t sleepdeep   : 1;
-            uint32_t             : 1;
-            uint32_t sevonpend   : 1;
-            uint32_t             : 27;
+            Value             : 1;
+            Value sleeponexit : 1;
+            Value sleepdeep   : 1;
+            Value             : 1;
+            Value sevonpend   : 1;
+            Value             : 27;
         } bit;
     };
 
@@ -194,26 +199,27 @@ public:
      */
     union Ccr
     {
+        typedef uint32_t Value;
         Ccr(){}
-        Ccr(uint32_t v){value = v;}
+        Ccr(Value v){value = v;}
        ~Ccr(){}    
       
-        uint32_t value;
-        struct 
+        Value value;
+        struct Bit 
         {
-            uint32_t nonbasethrdena : 1;
-            uint32_t usersetmpend   : 1;
-            uint32_t                : 1;
-            uint32_t unalign_trp    : 1;
-            uint32_t div0trp        : 1;
-            uint32_t                : 3;
-            uint32_t bfhfnmign      : 1;
-            uint32_t stkalign       : 1;
-            uint32_t                : 6;
-            uint32_t dc             : 1;
-            uint32_t ic             : 1;
-            uint32_t bp             : 1;
-            uint32_t                : 13;            
+            Value nonbasethrdena : 1;
+            Value usersetmpend   : 1;
+            Value                : 1;
+            Value unalign_trp    : 1;
+            Value div0trp        : 1;
+            Value                : 3;
+            Value bfhfnmign      : 1;
+            Value stkalign       : 1;
+            Value                : 6;
+            Value dc             : 1;
+            Value ic             : 1;
+            Value bp             : 1;
+            Value                : 13;            
         } bit;
     };
 
@@ -222,17 +228,18 @@ public:
      */
     union ShprN
     {
+        typedef uint32_t Value;
         ShprN(){}
-        ShprN(uint32_t v){value = v;}
+        ShprN(Value v){value = v;}
        ~ShprN(){}    
       
-        uint32_t value;
-        struct 
+        Value value;
+        struct Bit 
         {                       // | Register 1  | Register 2  | Register 3     |
-            uint32_t priN0 : 8; // | MPU Fault   |             | Debug Monitor  |
-            uint32_t priN1 : 8; // | Bus Fault   |             |                |
-            uint32_t priN2 : 8; // | Usage Fault |             | PendSV         |
-            uint32_t priN3 : 8; // |             | SVCall      | SysTick        |
+            Value priN0 : 8; // | MPU Fault   |             | Debug Monitor  |
+            Value priN1 : 8; // | Bus Fault   |             |                |
+            Value priN2 : 8; // | Usage Fault |             | PendSV         |
+            Value priN3 : 8; // |             | SVCall      | SysTick        |
         } bit;
     };
 
@@ -241,31 +248,32 @@ public:
      */
     union Shcsr
     {
+        typedef uint32_t Value;
         Shcsr(){}
-        Shcsr(uint32_t v){value = v;}
+        Shcsr(Value v){value = v;}
        ~Shcsr(){}    
       
-        uint32_t value;
-        struct 
+        Value value;
+        struct Bit 
         {
-            uint32_t memfaultact    : 1;
-            uint32_t busfaultact    : 1;
-            uint32_t                : 1;
-            uint32_t usgfaultact    : 1;
-            uint32_t                : 3;
-            uint32_t svcallact      : 1;
-            uint32_t monitoract     : 1;
-            uint32_t                : 1;
-            uint32_t pendsvact      : 1;
-            uint32_t systickact     : 1;
-            uint32_t usgfaultpended : 1;
-            uint32_t memfaultpended : 1;
-            uint32_t busfaultpended : 1;
-            uint32_t svcallpended   : 1;
-            uint32_t memfaultena    : 1;
-            uint32_t busfaultena    : 1;
-            uint32_t usgfaultena    : 1;
-            uint32_t                : 13;
+            Value memfaultact    : 1;
+            Value busfaultact    : 1;
+            Value                : 1;
+            Value usgfaultact    : 1;
+            Value                : 3;
+            Value svcallact      : 1;
+            Value monitoract     : 1;
+            Value                : 1;
+            Value pendsvact      : 1;
+            Value systickact     : 1;
+            Value usgfaultpended : 1;
+            Value memfaultpended : 1;
+            Value busfaultpended : 1;
+            Value svcallpended   : 1;
+            Value memfaultena    : 1;
+            Value busfaultena    : 1;
+            Value usgfaultena    : 1;
+            Value                : 13;
         } bit;
     };
 
@@ -274,37 +282,38 @@ public:
      */
     union Cfsr
     {
+        typedef uint32_t Value;
         Cfsr(){}
-        Cfsr(uint32_t v){value = v;}
+        Cfsr(Value v){value = v;}
        ~Cfsr(){}    
       
-        uint32_t value;
-        struct 
+        Value value;
+        struct Bit 
         {
-            uint32_t mmfsrIaccviol   : 1;
-            uint32_t mmfsrDaccviol   : 1;
-            uint32_t                 : 1;
-            uint32_t mmfsrMunstkerr  : 1;
-            uint32_t mmfsrMstkerr    : 1;
-            uint32_t mmfsrMlsperr    : 1;
-            uint32_t                 : 1;
-            uint32_t mmfsrMmarvalid  : 1;
-            uint32_t bfsrIbuserr     : 1;
-            uint32_t bfsrPreciserr   : 1;
-            uint32_t bfsrImpreciserr : 1;
-            uint32_t bfsrUnstkerr    : 1;
-            uint32_t bfsrStkerr      : 1;
-            uint32_t bfsrLsperr      : 1;
-            uint32_t                 : 1;
-            uint32_t bfsrBfarvalid   : 1;
-            uint32_t ufsrUndefinstr  : 1;
-            uint32_t ufsrInvstate    : 1;
-            uint32_t ufsrInvpc       : 1;
-            uint32_t ufsrNocp        : 1;
-            uint32_t                 : 4;
-            uint32_t ufsrUnaligned   : 1;
-            uint32_t ufsrDivbyzero   : 1;
-            uint32_t                 : 6;
+            Value mmfsrIaccviol   : 1;
+            Value mmfsrDaccviol   : 1;
+            Value                 : 1;
+            Value mmfsrMunstkerr  : 1;
+            Value mmfsrMstkerr    : 1;
+            Value mmfsrMlsperr    : 1;
+            Value                 : 1;
+            Value mmfsrMmarvalid  : 1;
+            Value bfsrIbuserr     : 1;
+            Value bfsrPreciserr   : 1;
+            Value bfsrImpreciserr : 1;
+            Value bfsrUnstkerr    : 1;
+            Value bfsrStkerr      : 1;
+            Value bfsrLsperr      : 1;
+            Value                 : 1;
+            Value bfsrBfarvalid   : 1;
+            Value ufsrUndefinstr  : 1;
+            Value ufsrInvstate    : 1;
+            Value ufsrInvpc       : 1;
+            Value ufsrNocp        : 1;
+            Value                 : 4;
+            Value ufsrUnaligned   : 1;
+            Value ufsrDivbyzero   : 1;
+            Value                 : 6;
         } bit;
     };
 
@@ -313,18 +322,19 @@ public:
      */
     union Hfsr
     {
+        typedef uint32_t Value;
         Hfsr(){}
-        Hfsr(uint32_t v){value = v;}
+        Hfsr(Value v){value = v;}
        ~Hfsr(){}    
       
-        uint32_t value;
-        struct 
+        Value value;
+        struct Bit 
         {
-            uint32_t          : 1;
-            uint32_t vecttbl  : 1;
-            uint32_t          : 28;
-            uint32_t forced   : 1;
-            uint32_t debugevt : 1;
+            Value          : 1;
+            Value vecttbl  : 1;
+            Value          : 28;
+            Value forced   : 1;
+            Value debugevt : 1;
         } bit;
     };
 
@@ -333,19 +343,20 @@ public:
      */
     union Dfsr
     {
+        typedef uint32_t Value;
         Dfsr(){}
-        Dfsr(uint32_t v){value = v;}
+        Dfsr(Value v){value = v;}
        ~Dfsr(){}    
       
-        uint32_t value;
-        struct 
+        Value value;
+        struct Bit 
         {
-            uint32_t halted   : 1;
-            uint32_t bkpt     : 1;
-            uint32_t dwttrap  : 1;
-            uint32_t vcatch   : 1;
-            uint32_t external : 1;
-            uint32_t          : 27;
+            Value halted   : 1;
+            Value bkpt     : 1;
+            Value dwttrap  : 1;
+            Value vcatch   : 1;
+            Value external : 1;
+            Value          : 27;
         } bit;
     };
 
@@ -354,14 +365,15 @@ public:
      */
     union Mmfar
     {
+        typedef uint32_t Value;
         Mmfar(){}
-        Mmfar(uint32_t v){value = v;}
+        Mmfar(Value v){value = v;}
        ~Mmfar(){}    
       
-        uint32_t value;
-        struct 
+        Value value;
+        struct Bit 
         {
-            uint32_t address : 32;
+            Value address : 32;
         } bit;
     };
 
@@ -370,14 +382,15 @@ public:
      */
     union Bfar
     {
+        typedef uint32_t Value;
         Bfar(){}
-        Bfar(uint32_t v){value = v;}
+        Bfar(Value v){value = v;}
        ~Bfar(){}    
       
-        uint32_t value;
-        struct 
+        Value value;
+        struct Bit 
         {
-            uint32_t address : 32;
+            Value address : 32;
         } bit;
     };
 
@@ -386,14 +399,15 @@ public:
      */
     union Afsr
     {
+        typedef uint32_t Value;
         Afsr(){}
-        Afsr(uint32_t v){value = v;}
+        Afsr(Value v){value = v;}
        ~Afsr(){}    
       
-        uint32_t value;
-        struct 
+        Value value;
+        struct Bit 
         {
-            uint32_t auxfault : 32;
+            Value auxfault : 32;
         } bit;
     };
 
@@ -402,11 +416,12 @@ public:
      */
     union IdPfr0
     {
+        typedef uint32_t Value;
         IdPfr0(){}
-        IdPfr0(uint32_t v){value = v;}
+        IdPfr0(Value v){value = v;}
        ~IdPfr0(){}    
       
-        uint32_t value;
+        Value value;
     };
 
     /**
@@ -414,11 +429,12 @@ public:
      */
     union IdPfr1
     {
+        typedef uint32_t Value;
         IdPfr1(){}
-        IdPfr1(uint32_t v){value = v;}
+        IdPfr1(Value v){value = v;}
        ~IdPfr1(){}    
       
-        uint32_t value;
+        Value value;
     };
 
     /**
@@ -426,11 +442,12 @@ public:
      */
     union IdDfr0
     {
+        typedef uint32_t Value;
         IdDfr0(){}
-        IdDfr0(uint32_t v){value = v;}
+        IdDfr0(Value v){value = v;}
        ~IdDfr0(){}    
       
-        uint32_t value;
+        Value value;
     };
 
     /**
@@ -438,11 +455,12 @@ public:
      */
     union IdAfr0
     {
+        typedef uint32_t Value;
         IdAfr0(){}
-        IdAfr0(uint32_t v){value = v;}
+        IdAfr0(Value v){value = v;}
        ~IdAfr0(){}    
       
-        uint32_t value;
+        Value value;
     };
 
     /**
@@ -450,11 +468,12 @@ public:
      */
     union IdMmfr0
     {
+        typedef uint32_t Value;
         IdMmfr0(){}
-        IdMmfr0(uint32_t v){value = v;}
+        IdMmfr0(Value v){value = v;}
        ~IdMmfr0(){}    
       
-        uint32_t value;
+        Value value;
     };
 
     /**
@@ -462,11 +481,12 @@ public:
      */
     union IdMmfr1
     {
+        typedef uint32_t Value;
         IdMmfr1(){}
-        IdMmfr1(uint32_t v){value = v;}
+        IdMmfr1(Value v){value = v;}
        ~IdMmfr1(){}    
       
-        uint32_t value;
+        Value value;
     };
 
     /**
@@ -474,11 +494,12 @@ public:
      */
     union IdMmfr2
     {
+        typedef uint32_t Value;
         IdMmfr2(){}
-        IdMmfr2(uint32_t v){value = v;}
+        IdMmfr2(Value v){value = v;}
        ~IdMmfr2(){}    
       
-        uint32_t value;
+        Value value;
     };
 
     /**
@@ -486,11 +507,12 @@ public:
      */
     union IdMmfr3
     {
+        typedef uint32_t Value;
         IdMmfr3(){}
-        IdMmfr3(uint32_t v){value = v;}
+        IdMmfr3(Value v){value = v;}
        ~IdMmfr3(){}    
       
-        uint32_t value;
+        Value value;
     };
 
     /**
@@ -498,11 +520,12 @@ public:
      */
     union IdIsar0
     {
+        typedef uint32_t Value;
         IdIsar0(){}
-        IdIsar0(uint32_t v){value = v;}
+        IdIsar0(Value v){value = v;}
        ~IdIsar0(){}    
       
-        uint32_t value;
+        Value value;
     };
 
     /**
@@ -510,11 +533,12 @@ public:
      */
     union IdIsar1
     {
+        typedef uint32_t Value;
         IdIsar1(){}
-        IdIsar1(uint32_t v){value = v;}
+        IdIsar1(Value v){value = v;}
        ~IdIsar1(){}    
       
-        uint32_t value;
+        Value value;
     };
 
     /**
@@ -522,11 +546,12 @@ public:
      */
     union IdIsar2
     {
+        typedef uint32_t Value;
         IdIsar2(){}
-        IdIsar2(uint32_t v){value = v;}
+        IdIsar2(Value v){value = v;}
        ~IdIsar2(){}    
       
-        uint32_t value;
+        Value value;
     };
 
     /**
@@ -534,11 +559,12 @@ public:
      */
     union IdIsar3
     {
+        typedef uint32_t Value;
         IdIsar3(){}
-        IdIsar3(uint32_t v){value = v;}
+        IdIsar3(Value v){value = v;}
        ~IdIsar3(){}    
       
-        uint32_t value;
+        Value value;
     };
 
     /**
@@ -546,11 +572,12 @@ public:
      */
     union IdIsar4
     {
+        typedef uint32_t Value;
         IdIsar4(){}
-        IdIsar4(uint32_t v){value = v;}
+        IdIsar4(Value v){value = v;}
        ~IdIsar4(){}    
       
-        uint32_t value;
+        Value value;
     };
 
     /**
@@ -558,11 +585,12 @@ public:
      */
     union Cpacr
     {
+        typedef uint32_t Value;
         Cpacr(){}
-        Cpacr(uint32_t v){value = v;}
+        Cpacr(Value v){value = v;}
        ~Cpacr(){}    
       
-        uint32_t value;
+        Value value;
     };
     
     /**

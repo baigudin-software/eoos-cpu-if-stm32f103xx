@@ -61,19 +61,20 @@ public:
      */
     union Csr
     {
+        typedef uint32_t Value;
         Csr(){}
-        Csr(uint32_t v){value = v;}
+        Csr(Value v){value = v;}
        ~Csr(){}    
       
-        uint32_t value;
-        struct 
+        Value value;
+        struct Bit 
         {
-            uint32_t enable    : 1;
-            uint32_t tickint   : 1;
-            uint32_t clksource : 1;
-            uint32_t           : 13;
-            uint32_t countflag : 1;
-            uint32_t           : 15;
+            Value enable    : 1;
+            Value tickint   : 1;
+            Value clksource : 1;
+            Value           : 13;
+            Value countflag : 1;
+            Value           : 15;
         } bit;
     };
 
@@ -82,15 +83,16 @@ public:
      */
     union Rvr
     {
+        typedef uint32_t Value;
         Rvr(){}
-        Rvr(uint32_t v){value = v;}
+        Rvr(Value v){value = v;}
        ~Rvr(){}    
       
-        uint32_t value;
-        struct 
+        Value value;
+        struct Bit 
         {
-            uint32_t reload : 24;
-            uint32_t        : 8;
+            Value reload : 24;
+            Value        : 8;
         } bit;
     };
 
@@ -99,14 +101,15 @@ public:
      */
     union Cvr
     {
+        typedef uint32_t Value;
         Cvr(){}
-        Cvr(uint32_t v){value = v;}
+        Cvr(Value v){value = v;}
        ~Cvr(){}    
       
-        uint32_t value;
-        struct 
+        Value value;
+        struct Bit 
         {
-            uint32_t current : 32;
+            Value current : 32;
         } bit;
     };
 
@@ -115,17 +118,18 @@ public:
      */
     union Cr
     {
+        typedef uint32_t Value;
         Cr(){}
-        Cr(uint32_t v){value = v;}
+        Cr(Value v){value = v;}
        ~Cr(){}    
       
-        uint32_t value;
-        struct 
+        Value value;
+        struct Bit 
         {
-            uint32_t tenms : 24;
-            uint32_t       : 6;
-            uint32_t skew  : 1;
-            uint32_t noref : 1;
+            Value tenms : 24;
+            Value       : 6;
+            Value skew  : 1;
+            Value noref : 1;
         } bit;
     };
     
