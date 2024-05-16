@@ -158,6 +158,10 @@ public:
             Value low1  : 1;
             Value low2  : 1;
         } bit;
+        
+        static const Value RQCP0_MASK = 0x00000001;        
+        static const Value RQCP1_MASK = 0x00000100;
+        static const Value RQCP2_MASK = 0x00010000;
     };
 
     /**

@@ -112,7 +112,7 @@ struct Registers
     struct Scs
     {
         /**
-         * Constructor.
+         * @brief Constructor.
          */    
         Scs();
         

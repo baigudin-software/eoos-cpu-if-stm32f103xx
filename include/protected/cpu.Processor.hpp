@@ -31,12 +31,12 @@ class Processor : public NonCopyable<NoAllocator>, public api::CpuProcessor
 public:
 
     /**
-     * Constructor.
+     * @brief Constructor.
      */
     Processor();
 
     /**
-     * Destructor.
+     * @brief Destructor.
      */
     virtual ~Processor();
 
